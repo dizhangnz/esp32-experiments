@@ -1,4 +1,4 @@
-# Toggle with interrupt
+# Two Keys
 
 ## Experiment Objectives
 
