@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Di Zhang",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": -0.18, "left": 23.77, "attrs": {} },
+    { "type": "wokwi-ili9341", "id": "lcd1", "top": -28, "left": 162.9, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "lcd1:VCC", "esp:5V", "red", [ "v28.8", "h-230.4", "v-67.2" ] ],
+    [ "esp:GND.1", "lcd1:GND", "black", [ "h-38.45", "v67.2", "h230.4" ] ],
+    [ "esp:5", "lcd1:LED", "green", [ "h-105.65", "v297.6", "h355.21" ] ],
+    [ "esp:9", "lcd1:D/C", "green", [ "h-86.45", "v172.8", "h307.2" ] ],
+    [ "esp:10", "lcd1:CS", "green", [ "h-76.85", "v153.6", "h278.4" ] ],
+    [ "esp:11", "lcd1:MOSI", "green", [ "h-67.25", "v134.4", "h297.6", "v-57.6" ] ],
+    [ "esp:12", "lcd1:SCK", "green", [ "h-57.65", "v115.2", "h297.61" ] ],
+    [ "esp:18", "lcd1:RST", "green", [ "h-96.05", "v230.4", "h307.2" ] ]
+  ],
+  "dependencies": {}
+}
