@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Di Zhang",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led-strip",
+      "id": "strip1",
+      "top": 21.3,
+      "left": 144,
+      "attrs": { "pixels": "8", "pixelShape": "square" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "strip1:VDD", "esp:GND.2", "green", [ "h0" ] ],
+    [ "strip1:VSS", "esp:5V", "green", [ "h-9.6", "v181.6", "h-153.6", "v-28.8" ] ],
+    [ "esp:23", "strip1:DIN", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
